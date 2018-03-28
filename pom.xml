@@ -1204,6 +1204,7 @@ under the License.
 							<rules>
 								<dependencyConvergence/>
 							</rules>
+              <skip>true</skip>
 						</configuration>
 					</execution>
 				</executions>
