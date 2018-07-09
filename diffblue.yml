@@ -1,3 +1,17 @@
-buildCmd: mvn compile
-testCmd: mvn test
+buildCmd: cd flink-contrib/flink-storm;mvn compile
+testCmd: cd flink-contrib/flink-storm;mvn test
 ignoreExistingCoverage: true
+cbmcArguments:
+phases:
+-
+  timeout: 60
+  cbmcArguments:
+    unwind: 1
+-
+  timeout: 120
+  cbmcArguments:
+    unwind: 2
+-
+  timeout: 300
+  cbmcArguments:
+    unwind: 5
